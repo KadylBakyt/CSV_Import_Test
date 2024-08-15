@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\Services\CSVImportProductService;
 use Illuminate\Support\Facades\File;
 
 class ImportCsv extends Command
@@ -12,7 +13,7 @@ class ImportCsv extends Command
      *
      * @var string
      */
-    protected $signature = 'import:csv {param?}';
+    protected $signature = 'import:csv {fileName} {param?}';
 
     /**
      * The console command description.
@@ -28,28 +29,29 @@ the data into DB(to table: tblProductData)';
     public function handle()
     {
         $param = $this->argument('param');
-        $this->info("Sending email to: {$param}!");
-
-        $csvFile = storage_path('app/public/stock.csv');
+        $fileName = $this->argument('fileName');
+        $csvFile = storage_path("app/public/{$fileName}");
 
         if (!File::exists($csvFile)) {
-            $this->error('CSV file not found.');
+            $this->error('CSV file not found !');
             return Command::FAILURE;
         }
 
-        $data = [];
-        $handle = fopen($csvFile, 'r');
+        $service = new CSVImportProductService($fileName);
+        $result = $service->import();
 
-        $headers = fgetcsv($handle);
+        $all_processes_items_count = $result['count_all'];
+        $this->info(" $all_processes_items_count items were processed");
 
-        while (($row = fgetcsv($handle)) !== false) {
+        $successful_items_count = $result['count_imported'];
+        $this->info(" $successful_items_count items were successful");
 
-            $this->error("$row[0]|| $row[1] || $row[2]");
-            //$data[] = array_combine($headers, $row);
-        }
+        $failed_items_count = $result['count_failed'];
+        $this->info(" $failed_items_count items were skipped");
 
-        fclose($handle);
+        //dd($result['errors']);
 
         return Command::SUCCESS;
+
     }
 }

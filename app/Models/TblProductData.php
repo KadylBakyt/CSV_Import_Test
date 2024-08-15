@@ -9,5 +9,15 @@ class TblProductData extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $table = 'tblProductData';
+
+    protected $fillable = [
+        'strProductName',
+        'strProductDesc',
+        'strProductCode',
+        'dtmAdded',
+        'dtmDiscontinued',
+    ];
 }
