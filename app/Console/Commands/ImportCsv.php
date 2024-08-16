@@ -41,7 +41,7 @@ the data into DB(to table: tblProductData)';
             return Command::FAILURE;
         }
 
-        $service = new CSVImportProductService($fileName, $param);
+        $service = new CSVImportProductService($csvFile, $param);
         $result = $service->import();
 
         $all_processes_items_count = $result['count_all'];
