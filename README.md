@@ -8,7 +8,7 @@
 
 ### Built With
 
-    [Laravel](laravel.com)
+    [Laravel](https://laravel.com/)
 
 #### Installation
   
@@ -52,10 +52,9 @@
 > Open the link: [http://localhost:8080](http://localhost:8080)
 
 #### CLI commands
+## CLI example: `php artisan import:csv <CSVFileName> <TEST_Mode>` 
 
 * Copy the `stock.csv` file to public storage folder
-
-  > CLI example: `php artisan import:csv <CSVFileName> <TEST_Mode>`  
 
   ```sh
   cp stock.csv storage/app/public/stock.csv 
