@@ -91,7 +91,11 @@
 ## Screens 
 ![image](https://github.com/user-attachments/assets/03ae31c2-138e-4573-93ea-6e0d3c105b52)
 
+# run test mode
 ![image](https://github.com/user-attachments/assets/45d862cf-37f4-4f52-bad7-cecdeb01dece)
 
+# DB table
 ![image](https://github.com/user-attachments/assets/6311d71e-7f91-46bf-b6e0-9e24b5548580)
 
+# Testing
+![image](https://github.com/user-attachments/assets/fe586991-6677-41fd-8217-6d75a738a700)
