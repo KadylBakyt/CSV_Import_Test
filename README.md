@@ -8,7 +8,7 @@
 
 ### Built With
 
-    * [![Laravel][Laravel.com]][Laravel-url]
+    * [Laravel](laravel.com)
 
 #### Installation
   
@@ -35,7 +35,7 @@
 
 
   ```sh
-  ./vendor/bin/sail artisan migrate
+  ./vendor/bin/sail artisan migrate:fresh
   ```
 
   ```sh
@@ -55,17 +55,18 @@
 
 * Copy the `stock.csv` file to public storage folder
 
+  > CLI example: `php artisan import:csv <CSVFileName> <TEST_Mode>`  
+
   ```sh
   cp stock.csv storage/app/public/stock.csv 
   ```
 
-* Insert the data into the
+* Insert the data into the DB
   ```sh
-  ./vendor/bin/sail artisan import:csv stock.csv
+  ./vendor/bin/sail artisan import:csv stock.csv or (on your localPC or in docker exec: `php artisan import:csv stock.csv`)
   ```
 
-* No insert the data into the('Test' mode)
+* No insert the data into the DB('Test' mode)
   ```sh
-  ./vendor/bin/sail artisan import:csv stock.csv test
+  ./vendor/bin/sail artisan import:csv stock.csv test or (on your localPC or in docker exec: `php artisan import:csv stock.csv test`)
   ```
-### Enjoy ...
