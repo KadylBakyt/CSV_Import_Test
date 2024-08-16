@@ -87,3 +87,11 @@
   ```sh
   php artisan import:csv stock.csv tes
   ```
+
+## Screens 
+![image](https://github.com/user-attachments/assets/03ae31c2-138e-4573-93ea-6e0d3c105b52)
+
+![image](https://github.com/user-attachments/assets/45d862cf-37f4-4f52-bad7-cecdeb01dece)
+
+![image](https://github.com/user-attachments/assets/6311d71e-7f91-46bf-b6e0-9e24b5548580)
+
