@@ -88,7 +88,7 @@
 
 * OR(on your localPC or in docker exec)
   ```sh
-  php artisan import:csv stock.csv tes
+  php artisan import:csv stock.csv test
   ```
 
 ## Screens 
