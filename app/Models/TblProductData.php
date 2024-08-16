@@ -19,5 +19,8 @@ class TblProductData extends Model
         'strProductCode',
         'dtmAdded',
         'dtmDiscontinued',
+        'intStockLevel',
+        'decimalPrice',
+        'boolDiscontinued'
     ];
 }
