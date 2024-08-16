@@ -8,7 +8,13 @@
 
 ### Built With
 
-    [Laravel](https://laravel.com/)
+ 1. [Laravel](https://laravel.com/)
+ 2. [MySQL](https://www.mysql.com/)
+
+### Libraries
+ 1. [League/csv](https://csv.thephpleague.com/)
+ 2. phpunit/phpunit
+ 3. laravel/sail
 
 #### Installation
   
