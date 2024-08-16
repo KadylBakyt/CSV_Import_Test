@@ -58,7 +58,9 @@
 > Open the link: [http://localhost:8080](http://localhost:8080)
 
 #### CLI commands
-## CLI example: `php artisan import:csv <CSVFileName> <TEST_Mode>` 
+
+## CLI example: 
+> `php artisan import:csv <CSVFileName> <TEST_Mode>` 
 
 * Copy the `stock.csv` file to public storage folder
 
