@@ -39,6 +39,9 @@
   ./vendor/bin/sail composer install
   ```
 
+ ```sh
+  cp .env.example .env
+  ```
 
   ```sh
   ./vendor/bin/sail artisan migrate:fresh
