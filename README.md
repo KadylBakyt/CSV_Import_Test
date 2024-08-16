@@ -8,7 +8,7 @@
 
 ### Built With
 
-    * [Laravel](laravel.com)
+    [Laravel](laravel.com)
 
 #### Installation
   
@@ -63,10 +63,20 @@
 
 * Insert the data into the DB
   ```sh
-  ./vendor/bin/sail artisan import:csv stock.csv or (on your localPC or in docker exec: `php artisan import:csv stock.csv`)
+  ./vendor/bin/sail artisan import:csv stock.csv
+  ```
+
+* OR(on your localPC or in docker exec)
+  ```sh
+  php artisan import:csv stock.csv
   ```
 
 * No insert the data into the DB('Test' mode)
   ```sh
-  ./vendor/bin/sail artisan import:csv stock.csv test or (on your localPC or in docker exec: `php artisan import:csv stock.csv test`)
+  ./vendor/bin/sail artisan import:csv stock.csv test 
+  ```
+
+* OR(on your localPC or in docker exec)
+  ```sh
+  php artisan import:csv stock.csv tes
   ```
